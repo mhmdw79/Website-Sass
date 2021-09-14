@@ -1,0 +1,43 @@
+@mixin overal {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+@mixin style($size,$weight,$color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    
+}
+@mixin media($size) {
+    @if($size==M) {
+        @media(max-width:768px){
+            @content;
+        }
+        
+    }@else if ($size == L) {
+        @media(min-width:768px) and (max-width:1200px){
+            @content;
+        
+    }
+    
+}
+}
+@mixin bodystyle {
+    background-color: $seconderycolor;
+    height: 600px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+@mixin boxstyle {
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+    
+}
